@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despedida de Solteros | Claudia & Miguel</title>
+    <meta name="description" content="¡Te invitamos a celebrar con nosotros nuestra despedida de solteros! Acompáñanos este 11 de Julio.">
+    
+    <!-- Open Graph Metadata para compartir en Redes Sociales (WhatsApp, Facebook, etc.) -->
+    <meta property="og:title" content="Despedida de Solteros | Claudia & Miguel">
+    <meta property="og:description" content="¡Te invitamos a celebrar con nosotros nuestra despedida de solteros! Acompáñanos este 11 de Julio en el Salón Merequetengue.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Assets/Hero.jpeg">
+    <meta property="og:url" content="https://invitacion-claudia-y-miguel.vercel.app">
+
+    <!-- Fuentes Premium desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos de la aplicación -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Botón Reproductor de Música Flotante -->
+    <div class="audio-control-container" id="audioControlContainer">
+        <button class="audio-button" id="musicToggleButton" aria-label="Reproducir música">
+            <svg class="icon-music-off" id="iconMusicOff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18V5l12-2v13"></path>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="16" r="3"></circle>
+                <line x1="3" y1="3" x2="21" y2="21"></line>
+            </svg>
+            <svg class="icon-music-on hidden" id="iconMusicOn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18V5l12-2v13"></path>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="16" r="3"></circle>
+            </svg>
+        </button>
+        <audio id="bgMusic" loop preload="auto">
+            <source src="Assets/cancion.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- Sección Portada / Hero -->
+    <header class="hero-section" id="inicio">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tagline">Nuestra Despedida de Solteros</span>
+            <h1 class="hero-title">
+                <span class="name-claudia">Claudia</span>
+                <span class="ampersand">&</span>
+                <span class="name-miguel">Miguel</span>
+            </h1>
+            <p class="hero-subtitle">¡Nos casamos y queremos festejar contigo antes del gran día!</p>
+            
+            <!-- Cuenta Regresiva -->
+            <div class="countdown-container" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Min</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seg</span>
+                </div>
+            </div>
+
+            <a href="#rsvp" class="btn-primary scroll-link">Confirmar Asistencia</a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Desliza para ver más</span>
+            <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Sección Mensaje de Bienvenida -->
+    <section class="welcome-section">
+        <div class="container text-center">
+            <div class="welcome-card glass-panel">
+                <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                </svg>
+                <p class="welcome-text">
+                    "El amor no consiste en mirarse el uno al otro, sino en mirar juntos en la misma dirección."
+                </p>
+                <p class="welcome-body">
+                    Acompáñanos a compartir una tarde inolvidable llena de risas, buena comida y grandes momentos antes de dar el "sí, acepto". Tu presencia hará este día aún más especial para nosotros.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Galería de Fotos (Espacios reservados) -->
+    <section class="gallery-section" id="galeria">
+        <div class="container">
+            <h2 class="section-title text-center">Momentos Especiales</h2>
+            <p class="section-subtitle text-center">Nuestra historia en fotos</p>
+            
+            <div class="gallery-grid">
+                <!-- Imagen 1 - Formato Vertical -->
+                <div class="gallery-item item-vertical glass-panel">
+                    <div class="image-wrapper">
+                        <img class="real-image" src="Assets/Beso en puente.jpeg" alt="Claudia y Miguel - Beso en el puente">
+                    </div>
+                </div>
+
+                <!-- Imagen 2 - Formato Cuadrado -->
+                <div class="gallery-item item-square glass-panel">
+                    <div class="image-wrapper">
+                        <img class="real-image" src="Assets/anillo.jpeg" alt="Claudia y Miguel - Anillo de compromiso">
+                    </div>
+                </div>
+
+                <!-- Imagen 3 - Formato Cuadrado -->
+                <div class="gallery-item item-square glass-panel">
+                    <div class="image-wrapper">
+                        <img class="real-image" src="Assets/pedida.jpeg" alt="Claudia y Miguel - Pedida de mano">
+                    </div>
+                </div>
+
+                <!-- Imagen 4 - Formato Horizontal (Destacada) -->
+                <div class="gallery-item item-horizontal glass-panel">
+                    <div class="image-wrapper">
+                        <img class="real-image" src="Assets/laguna.jpeg" alt="Claudia y Miguel - Junto a la laguna">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Detalles del Evento -->
+    <section class="details-section" id="detalles">
+        <div class="container">
+            <h2 class="section-title text-center">Detalles del Evento</h2>
+            <p class="section-subtitle text-center">Cuándo y dónde nos reuniremos</p>
+            
+            <div class="details-cards-container">
+                <!-- Tarjeta Cuándo -->
+                <div class="details-card glass-panel text-center">
+                    <div class="detail-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3>¿Cuándo?</h3>
+                    <p class="detail-highlight">Sábado, 11 de Julio</p>
+                    <p class="detail-subtext">Horario: 4:00 PM</p>
+                    <div class="detail-divider"></div>
+                    <p class="detail-note">Te sugerimos llegar puntual para disfrutar la comida completa con nosotros.</p>
+                </div>
+
+                <!-- Tarjeta Dónde -->
+                <div class="details-card glass-panel text-center">
+                    <div class="detail-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3>¿Dónde?</h3>
+                    <p class="detail-highlight">Salón Merequetengue</p>
+                    <p class="detail-address">Paseo de las Lomas 70, Parque Residencial Coacalco, Edo. de México</p>
+                    
+                    <div class="detail-divider"></div>
+                    
+                    <!-- Botones de Navegación -->
+                    <div class="navigation-buttons">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Paseo+de+las+lomas+70+Parque+residencial+coacalco+Salon+Merequetengue" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                            </svg>
+                            Ver en Google Maps
+                        </a>
+                        <a href="https://waze.com/ul?q=Paseo+de+las+lomas+70+Parque+residencial+coacalco+Salon+Merequetengue" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5.5 8.5h13v8a2.5 2.5 0 0 1-2.5 2.5h-8A2.5 2.5 0 0 1 5.5 16.5v-8Z"></path>
+                                <path d="M18.5 10.5c1.4-1.2 2.5-3.5 1.5-5.5-1.1-2.2-4.1-1.3-4.5 1"></path>
+                                <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                                <circle cx="15.5" cy="19.5" r="1.5"></circle>
+                            </svg>
+                            Ver en Waze
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección RSVP / Confirmación Personalizada -->
+    <section class="rsvp-section" id="rsvp">
+        <div class="container">
+            <div class="rsvp-card glass-panel">
+                <div class="rsvp-header text-center">
+                    <h2 class="section-title">Confirmar Asistencia</h2>
+                    <p class="guest-invitation-text" style="margin-top: 1rem;">Nos encantaría contar con tu presencia en esta comida tan especial para nosotros. Por favor, confirma tu asistencia completando el formulario.</p>
+                </div>
+
+                <!-- Formulario RSVP -->
+                <form class="rsvp-form" id="rsvpForm">
+                    <!-- ID del invitado oculto (para ligar al Google Sheets) -->
+                    <input type="hidden" name="guestId" id="inputGuestId" value="">
+
+                    <!-- Nombre del invitado -->
+                    <div class="form-group">
+                        <label for="inputGuestNameRaw" class="form-label">Nombre Completo</label>
+                        <input type="text" name="guestNameRaw" id="inputGuestNameRaw" class="form-input" required placeholder="Escribe tu nombre completo">
+                    </div>
+
+                    <!-- Selección de asistencia (Chips modernos) -->
+                    <div class="form-group text-center">
+                        <label class="form-label">¿Podrás acompañarnos?</label>
+                        <div class="attendance-options">
+                            <label class="attendance-chip">
+                                <input type="radio" name="attendance" value="Confirmado" required>
+                                <span class="chip-content">
+                                    <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Sí, asistiré
+                                </span>
+                            </label>
+                            
+                            <label class="attendance-chip chip-decline">
+                                <input type="radio" name="attendance" value="Declinado" required>
+                                <span class="chip-content">
+                                    <svg class="chip-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                    No podré asistir
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Número de Acompañantes (se muestra si asiste) -->
+                    <div class="form-group" id="companionsCountGroup" style="display: none;">
+                        <label for="selectCompanionsCount" class="form-label">¿Cuántos acompañantes traes?</label>
+                        <div class="select-wrapper">
+                            <select name="companionsCount" id="selectCompanionsCount" class="form-select">
+                                <option value="0">Sin acompañantes</option>
+                                <option value="1">1 acompañante</option>
+                                <option value="2">2 acompañantes</option>
+                                <option value="3">3 acompañantes</option>
+                                <option value="4">4 acompañantes</option>
+                                <option value="5">5 acompañantes</option>
+                            </select>
+                            <svg class="select-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Nombres de los Acompañantes (se muestra si número de acompañantes > 0) -->
+                    <div class="form-group" id="companionsNamesGroup" style="display: none;">
+                        <label for="inputCompanionsNames" class="form-label">Nombres de tus acompañantes</label>
+                        <input type="text" name="companionsNames" id="inputCompanionsNames" class="form-input" placeholder="Ej. Juan Pérez, María López">
+                    </div>
+
+                    <!-- Mensaje opcional o felicitaciones -->
+                    <div class="form-group">
+                        <label for="textareaMessage" class="form-label">Escríbenos un mensaje (Opcional)</label>
+                        <textarea name="message" id="textareaMessage" class="form-textarea" placeholder="Déjanos un consejo, duda o felicitación..." rows="3"></textarea>
+                    </div>
+
+                    <!-- Botón de Envío -->
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary btn-submit" id="btnSubmitRSVP">
+                            <span class="btn-text" id="btnSubmitText">Enviar Confirmación</span>
+                            <span class="btn-spinner hidden" id="btnSubmitSpinner"></span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Mensaje de éxito / error posterior al envío -->
+                <div class="rsvp-feedback-message hidden" id="rsvpFeedbackMessage">
+                    <div class="feedback-icon-container" id="feedbackIconContainer">
+                        <!-- Éxito -->
+                        <svg class="feedback-icon-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feedback-title" id="feedbackTitle">¡Muchas Gracias!</h3>
+                    <p class="feedback-text" id="feedbackText">Tu confirmación ha sido registrada con éxito. Nos vemos muy pronto.</p>
+                    <button class="btn-secondary btn-back-form" id="btnBackToForm">Actualizar respuesta</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container text-center">
+            <p class="footer-names">Claudia & Miguel</p>
+            <p class="footer-party">#DespedidaCyM</p>
+            <div class="footer-divider"></div>
+            <p class="footer-copyright">&copy; 2026. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts de la aplicación -->
+    <script src="app.js?v=2"></script>
+</body>
+</html>
